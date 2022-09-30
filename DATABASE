@@ -1,0 +1,482 @@
+#include<iostream>
+using namespace std;
+#include<iomanip>
+
+int Keyboards(int);
+int Graphics_card(int);
+int monitors(int);
+int Rams(int);
+int processors(int);
+int m_boards(int);
+int main()
+{
+	char choice;
+back:
+	cout << "1) keyboards" << setw(25) << "2) Monitors";
+	cout << endl << "3) Rams" << setw(36) << "4) Graphics cards";
+	cout << endl << "5) Processors " << setw(27) << "6) Motherbaords";
+	int sel;
+
+	cout << "\nPlease select a Number :";
+	cin >> sel;
+	cout << "-------------------------------------------------------------------------" << endl;
+	if (sel == 1)
+	{
+		Keyboards(sel);
+
+	}
+	if (sel == 4)
+	{
+		Graphics_card(sel);
+	}
+	if (sel == 2) {
+
+		monitors(sel);
+	}
+	if (sel == 3)
+	{
+		Rams(sel);
+	}
+	if (sel == 5)
+	{
+		processors(sel);
+	}
+	if (sel == 6)
+	{
+		m_boards(sel);
+	}
+	cout << "IF you want to buy more things(monitors, rams , grahics card etc) press 'y' other wise press 'n'::";
+	cin >> choice;
+	if (choice == 'y')
+	{	cout << "-------------------------------------------------------------------------" << endl;
+		goto back;
+	   cout<<endl<< "-------------------------------------------------------------------------" << endl;
+     }
+	else
+		return 0;
+		
+}
+
+int Keyboards(int num)
+{
+	int model, qan, t = 1, pri, amo;
+	string opt;
+repeatt:
+	cout << "\n1)Asus gaming keyboard" << setw(25) << "2) Dell Keyboard";
+	cout << "\n3) Mechincal Keyboard" << setw(37) << "4) Non branded RGB Keyboard";
+	cout << "\nEnter Number of one Model:";
+	cin >> model;
+
+	cout << "--------------------------------------------------------------------------" << endl;
+	if (model == 1)
+	{
+		cout << "\nyou have selecetd Asus gaming keyboard\nPrice of this is key board is 5500\nPlease enter in quantity you want:";
+		cin >> qan;
+		pri = 5500;
+		cout << "Price of keyboard is as under:" << endl;
+		while (t <= qan)
+		{
+			amo = t * pri;
+			cout << "Price of" << t << "=" << pri << "*" << t << "=" << amo << endl;
+			t++;
+
+		}
+		cout << "\nThe total bill is=" << qan * pri;
+
+
+	}
+	else if (model == 2)
+	{
+		cout << "you have selecetd Dell keyboard\nPrice of this is key board is 900\nPlease enter in quantity you want:";
+		cin >> qan;
+		pri = 900;
+		cout << "Price of keyboard is as under:" << endl;
+		while (t <= qan)
+		{
+			amo = t * pri;
+			cout << "Price of" << t << "=" << pri << "*" << t << "=" << amo << endl;
+			t++;
+
+		}
+		cout << "\nThe total bill is=" << qan * pri;
+
+	}
+	else if (model == 3)
+	{
+		cout << "you have selecetd Mechnical keyboard\nPrice of this is key board is 6000\nPlease enter in quantity you want:";
+		cin >> qan;
+		pri = 6000;
+		cout << "Price of keyboard is as under:" << endl;
+		while (t <= qan)
+		{
+			amo = t * pri;
+			cout << "Price of" << t << "=" << pri << "*" << t << "=" << amo << endl;
+			t++;
+
+		}
+		cout << "\nThe total bill is=" << qan * pri;
+
+
+	}
+	else if (model == 4)
+	{
+		cout << "you have selecetd Non branded keyboard\nPrice of this is key board is 2500\nPlease enter in quantity you want:";
+		cin >> qan;
+		pri = 2500;
+		cout << "Price of keyboard is as under:" << endl;
+		while (t <= qan)
+		{
+			amo = t * pri;
+			cout << "Price of" << t << "=" << pri << "*" << t << "=" << amo << endl;
+			t++;
+
+		}
+		cout << "\nThe total bill is=" << qan * pri;
+	}
+
+	cout <<endl<< "do you want to buy more key boards(y or n):";
+	cin >> opt;
+	if (opt == "y")
+		goto repeatt;
+	return model;
+
+}
+
+int Graphics_card(int num)
+{
+	int model, quantity, price;
+	char coh;
+	int t = 0,amo;
+	rpt:
+	cout << "Choose any model" << endl;
+	cout << "1.RTX 3080TI\n2.GTX 1080TI\n3.AMD R9" << endl;
+	cin >> model;
+	cout << "\n--------------------------------------------------------------------------" << endl;
+	if (model == 1)
+	{
+		price = 120000;
+		cout << " You have selected RTX 3080Ti\nThe price of RTX 3080TI is: " << price << endl;
+		cout << "Enter quantity" << endl;
+		cin >> quantity;
+		cout << "Your quantity is:  " << quantity << endl;
+		cout << "Price of Graphics Card is as under:" << endl;
+		while (t < quantity)
+		{
+			amo = t* price;
+			cout << "Price of" << t << "=" << price << "*" << t << "=" << amo << endl;
+			t++;
+
+		}
+		cout << "Total Price to pay:" << price * quantity << endl;
+	}
+	else if (model == 2)
+	{
+		price = 60000;
+		cout << " You have selected RTX 1080Ti\nThe price of RTX 1080TI is: " << price << endl;
+		cout << "Enter quantity" << endl;
+		cin >> quantity;
+		cout << "Your quantity is:  " << quantity << endl;
+		cout << "Price of Graphics Card is as under:" << endl;
+		while (t < quantity)
+		{
+			amo = t * price;
+			cout << "Price of" << t << "=" << price << "*" << t << "=" << amo << endl;
+			t++;
+
+		}
+		cout << "The total price to pay is :" << price * quantity;
+	}
+	else if (model == 3)
+	{
+		price = 35000;
+		cout << " You have selected R9\nThe price of R9 is: " << price << endl;
+		cout << "Enter quantity" << endl;
+		cin >> quantity;
+		cout << "Your quantity is:  " << quantity << endl;
+		cout << "Price of Graphics Card is as under:" << endl;
+		while (t < quantity)
+		{
+			amo = t * price;
+			cout << "Price of" << t << "=" << price << "*" << t << "=" << amo << endl;
+			t++;
+
+		}
+		cout << "The total price to pay is :"<<price*quantity;
+	}
+	cout << "if you want to buy more Graphics Card press 'y' else 'n'";
+	cin >> coh;
+	if (coh == 'y')
+		goto rpt;
+	return model;
+}
+
+int monitors(int num) {
+	int quantity, price;
+	int model,t=1,amo;
+	char ch;
+	cout << "select any model below:\n";
+	rt:
+	cout << "1)DELL-PRICE:9000\t2)HP-PRICE:11000\t3)BENQ-PRICE:14000\n";
+	cin >> model;
+	cout << "\n--------------------------------------------------------------------------" << endl;
+	switch (model) {
+	case 1: {
+		price = 9000;
+		cout << "YOU HAVE SELECTED DELL MODEL AND ITS PRICE IS 9000\n";
+		cout << "select the quantity:\n";
+		cin >> quantity;
+		cout << "Price of this Monitor is as under:" << endl;
+		while (t <= quantity)
+		{
+			amo = t * price;
+			cout << "Price of" << t << "=" << price << "*" << t << "=" << amo << endl;
+			t++;
+
+		}
+		cout << "The total price to pay is:" << quantity * price;
+	}
+		  break;
+	case 2:
+	{
+		price = 11000;
+		cout << "YOU HAVE SELECTED HP MODEL and ITS PRICE IS 11000\n";
+		cout << "select the quantity:\n";
+		cin >> quantity;
+		cout << "Price of this Monitor is as under:" << endl;
+		while (t <= quantity)
+		{
+			amo = t * price;
+			cout << "Price of" << t << "=" << price << "*" << t << "=" << amo << endl;
+			t++;
+
+		}
+		cout << "The total price to pay is:" << quantity * price;
+	}
+		break;
+	case 3:
+	{
+		price = 14000;
+		cout << "YOU HAVE SELECTED BENQ MODEl AND ITS PRICE IS 14000\n";
+		cout << "select the quantity:\n";
+		cin >> quantity;
+		cout << "Price of this Monitor is as under:" << endl;
+		while (t <= quantity)
+		{
+			amo = t * price;
+			cout << "Price of" << t << "=" << price << "*" << t << "=" << amo << endl;
+			t++;
+
+		}
+		cout << "The total price to pay is:" << quantity * price;
+	}
+	break;
+	default:
+		cout << "SORRY! THE MODEL YOU WANT IS NOT AVAILABLE HERE:)";
+	}
+	cout << "you want buy more leds press 'y' else 'n':";
+	cin >> ch;
+	if (ch == 'y')
+		goto rt;
+	return num;
+}
+int Rams(int num)
+{
+	int quantity, price;
+	int model,amo;
+	char e;
+	re:
+	cout << "select any model below:\n";
+	cout << "1)DDr2 4gb -PRICE:1500\n2)DDr3 16gb-PRICE:5500\n3)DDr4 8gb-PRICE:9000\n";
+	cin >> model;
+	cout << "\n--------------------------------------------------------------------------" << endl;
+	switch (model) {
+	case 1:
+	{
+		price = 1500;
+		cout << "YOU HAVE SELECTED DDr2 4gb MODEL AND ITS PRICE IS 1500\n";
+		cout << "select the quantity:\n";
+		cin >> quantity;
+		cout << "Price of this Ram is as under:" << endl;
+		for (int t = 1; t <= quantity; t++)
+		{
+			amo = t * price;
+			cout << "Price of" << t << "=" << price << "*" << t << "=" << amo << endl;
+
+		}
+		cout << "The total price to pay is:" << price * quantity << endl;
+	}
+	break;
+	case 2:
+	{
+		price = 5500;
+		cout << "YOU HAVE SELECTED DDr3 16gb MODEL and ITS PRICE IS 5500\n";
+		cout << "select the quantity:\n";
+		cin >> quantity;
+		cout << "Price of this Ram is as under:" << endl;
+		for (int t = 1; t <= quantity; t++)
+		{
+			amo = t * price;
+			cout << "Price of" << t << "=" << price << "*" << t << "=" << amo << endl;
+
+		}
+		cout << "The total bill to pay is:" << price * quantity << endl;
+	}
+	break;
+	case 3:
+	{
+		price = 9000;
+		cout << "YOU HAVE SELECTED DDr4 8gb MODEL AND ITS PRICE IS 9000\n";
+		cout << "select the quantity:\n";
+		cin >> quantity;
+
+		cout << "Price of this Ram is as under:" << endl;
+		for (int t = 1; t <= quantity; t++)
+		{
+			amo = t * price;
+			cout << "Price of" << t << "=" << price << "*" << t << "=" << amo << endl;
+
+		}
+		cout << "The total price to pay is:" << price * quantity << endl;
+	}
+		break;
+	default:
+		cout << "SORRY! THE MODEL YOU WANT IS NOT AVAILABLE HERE:)";
+		return 0;
+	}
+	cout << "if you want to buy more ram press'y' else 'n':";
+	cin >> e;
+	if (e == 'y')
+		goto re;
+	return num;
+}
+int processors(int num)
+{
+	int model, qan, t = 1, pri=0, amo;
+	string opt;
+repeatt:
+	cout << "\n1) Core i9 10th Generation" << setw(36) << "2) Core i7 8th Generation";
+	cout << "\n3) Core i5 6th Generation";//
+	cout << "\nEnter Number of one Model:";
+	cin >> model;
+
+	cout << "--------------------------------------------------------------------------" << endl;
+	if (model == 1)
+	{
+		cout << "\nyou have selecetd Core i9 10th Generation Processor\nPrice of this Processor is 90000\nPlease enter in quantity you want:";
+		cin >> qan;
+		pri = 90000;
+		cout << "Price of Processor is as under:" << endl;
+		while (t <= qan)
+		{
+			amo = t * pri;
+			cout << "Price of" << t << "=" << pri << "*" << t << "=" << amo << endl;
+			t++;
+
+		}
+		cout << "\nThe total bill is=" << qan * pri;
+
+
+	}
+	if (model == 2)
+	{
+		cout << "\nyou have selecetd Core i7 8th Generation Processor\nPrice of this Processor is 76000\nPlease enter in quantity you want:";
+		cin >> qan;
+		pri = 76000;
+		cout << "Price of Processor is as under:" << endl;
+		while (t <= qan)
+		{
+			amo = t * pri;
+			cout << "Price of" << t << "=" << pri << "*" << t << "=" << amo << endl;
+			t++;
+
+		}
+		cout << "\nThe total bill is=" << qan * pri;
+	}
+	if (model == 3)
+	{
+		cout << "\nyou have selecetd Core i5 6th Generation Processor\nPrice of this Processor is 54000\nPlease enter in quantity you want:";
+		cin >> qan;
+		pri = 54000;
+		cout << "Price of Processor is as under:" << endl;
+		while (t <= qan)
+		{
+			amo = t * pri;
+			cout << "Price of" << t << "=" << pri << "*" << t << "=" << amo << endl;
+			t++;
+
+		}
+		cout << "\nThe total bill is=" << qan * pri;
+	}
+	cout << "\nIf you want to shop more Press 'y' else press 'n' to exit:"<<endl;
+	cin >> opt;
+	if (opt == "y")
+		goto repeatt;
+	return 0;
+
+}
+
+int m_boards(int num)
+{
+	int model, qan, t = 1, pri=0, amo;
+	string opt;
+repeatt:
+	cout << "\n1) Gigabyte" << setw(25) << "2) Intel";
+	cout << "\n3) Amd";
+	cout << "\nEnter Number of one Model:";
+	cin >> model;
+
+	cout << "--------------------------------------------------------------------------" << endl;
+	if (model == 1)
+	{
+		cout << "\nyou have seleced Gigabyte Motherboard\nPrice of this Motherboard is 9000\nPlease enter in quantity you want:";
+		cin >> qan;
+		pri = 9000;
+		cout << "Price of Motherboard is as under:" << endl;
+		while (t <= qan)
+		{
+			amo = t * pri;
+			cout << "Price of" << t << "=" << pri << "*" << t << "=" << amo << endl;
+			t++;
+
+		}
+		cout << "\nThe total bill is=" << qan * pri;
+
+
+	}
+	if (model == 2)
+	{
+		cout << "\nyou have selecetd Intel Motherboard\nPrice of this Motherboard is 7900\nPlease enter in quantity you want:";
+		cin >> qan;
+		pri = 7900;
+		cout << "Price of Motherboard is as under:" << endl;
+		while (t <= qan)
+		{
+			amo = t * pri;
+			cout << "Price of" << t << "=" << pri << "*" << t << "=" << amo << endl;
+			t++;
+
+		}
+		cout << "\nThe total bill is=" << qan * pri;
+	}
+	if (model == 3)
+	{
+		cout << "\nyou have selecetd Amd Motherboard\nPrice of this Motherboard is 6000\nPlease enter in quantity you want:";
+		cin >> qan;
+		pri = 6000;
+		cout << "Price of Motherboard is as under:" << endl;
+		while (t <= qan)
+		{
+			amo = t * pri;
+			cout << "Price of" << t << "=" << pri << "*" << t << "=" << amo << endl;
+			t++;
+
+		}
+		cout << "\nThe total bill is=" << qan * pri;
+	}
+	cout << "\nIf you want to shop more Press 'y' else press 'n' to exit:"<<endl;
+	cin >> opt;
+	if (opt == "y")
+		goto repeatt;
+	return 0;
+
+}
